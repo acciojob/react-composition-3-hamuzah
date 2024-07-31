@@ -1,20 +1,21 @@
-// src/App.js
-import React from 'react';
-import Tooltip from './components/Tooltip';
+import React from "react";
+import './../styles/App.css';
+import FirstToolTip from "./FirstToolTip";
+import SecondToolTip from "./SecondToolTip";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>React Tooltip Example</h1>
-      <Tooltip text="This is a tooltip for the first element">
-        <span>Hover over me</span>
-      </Tooltip>
-      <br /><br />
-      <Tooltip text="This is another tooltip for the second element">
-        <button>Hover over this button</button>
-      </Tooltip>
+    <div>
+        {/* Do not remove the main div */}
+        <FirstToolTip text="This is a tooltip">
+          <h2>Hover over me</h2>
+        </FirstToolTip>
+
+        <SecondToolTip text="This is another tooltip">
+          <p>Hover over me to see another tooltip</p>
+        </SecondToolTip>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
